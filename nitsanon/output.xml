@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-11T12:04:46.311633" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Nitin.kumar4\PycharmProjects\project_robotFramework\nitsanon\login.robot">
+<test id="s1-t1" name="Validate story dates are present and equal" line="22">
+<kw name="open the browser and navigate to NITSANON portal" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:46.534761" level="INFO">Opening browser 'Chrome' to base url 'http://nitsanon.epizy.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-11T12:04:46.534761" elapsed="6.152107"/>
+</kw>
+<status status="PASS" start="2024-04-11T12:04:46.533733" elapsed="6.154139"/>
+</kw>
+<kw name="Put credentials in the portal">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:52.689055" level="INFO">Typing text 'nitin' into text field 'id=username'.</msg>
+<arg>${USERNAME_TEXTBOX}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T12:04:52.689055" elapsed="0.103975"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:52.794320" level="INFO">Typing text 'kumar' into text field 'id=password'.</msg>
+<arg>${PASSWORD_TEXTBOX}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T12:04:52.794320" elapsed="0.087427"/>
+</kw>
+<arg>${C_USERNAME}</arg>
+<arg>${C_PASSWORD}</arg>
+<status status="PASS" start="2024-04-11T12:04:52.688033" elapsed="0.194717"/>
+</kw>
+<kw name="Click on submit button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:52.882884" level="INFO">Clicking button 'name=login'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T12:04:52.882884" elapsed="2.476837"/>
+</kw>
+<status status="PASS" start="2024-04-11T12:04:52.882884" elapsed="2.477909"/>
+</kw>
+<kw name="Check the page is navigated to dashboard">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:55.366481" level="INFO">Page title is 'NITSANON'.</msg>
+<arg>${EXPECTED_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.360793" elapsed="0.005688"/>
+</kw>
+<status status="PASS" start="2024-04-11T12:04:55.360793" elapsed="0.005688"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-04-11T12:04:55.375536" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.60")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>${DATE_OF_POST}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.366481" elapsed="0.009055"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.375536" level="INFO">@{actual_DATE_OF_POST} = [ ]</msg>
+<var>@{actual_DATE_OF_POST}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.375536" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.389053" level="INFO">2024-04-01 05:31:23</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.375536" elapsed="0.013517"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_DATE_OF_POST}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.389053" elapsed="0.009673"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.60")&gt;</var>
+<status status="PASS" start="2024-04-11T12:04:55.375536" elapsed="0.023190"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.406555" level="INFO">2024-04-01 05:31:10</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.399792" elapsed="0.006763"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_DATE_OF_POST}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.406555" elapsed="0.007438"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.61")&gt;</var>
+<status status="PASS" start="2024-04-11T12:04:55.399792" elapsed="0.014201"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.419896" level="INFO">2023-09-04 05:36:41</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.413993" elapsed="0.005903"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_DATE_OF_POST}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.420951" elapsed="0.005273"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.62")&gt;</var>
+<status status="PASS" start="2024-04-11T12:04:55.413993" elapsed="0.012231"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.432693" level="INFO">2023-08-13 01:04:28</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.427282" elapsed="0.005411"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_DATE_OF_POST}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.432693" elapsed="0.006084"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.63")&gt;</var>
+<status status="PASS" start="2024-04-11T12:04:55.426224" elapsed="0.012553"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T12:04:55.444765" level="INFO">2023-02-18 02:16:58</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.439873" elapsed="0.004892"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_DATE_OF_POST}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.446007" elapsed="0.006057"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="07ff4d42ac29608f485333684045f64c", element="f.BAD9211F30C3178E931B1FD3A38FF53A.d.757A03D082A9E4957572628DFF1A9009.e.64")&gt;</var>
+<status status="PASS" start="2024-04-11T12:04:55.438777" elapsed="0.013287"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2024-04-11T12:04:55.375536" elapsed="0.076528"/>
+</for>
+<kw name="Lists Should Be Equal" owner="Collections">
+<msg time="2024-04-11T12:04:55.453128" level="FAIL">Lengths are different: 6 != 5</msg>
+<arg>${expected_DATE_OF_POST}</arg>
+<arg>${actual_DATE_OF_POST}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="FAIL" start="2024-04-11T12:04:55.453128" elapsed="0.000000">Lengths are different: 6 != 5</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>len(${expected_DATE_OF_POST})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-04-11T12:04:55.453128" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>len(${actual_DATE_OF_POST})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-04-11T12:04:55.454222" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-11T12:04:55.454222" elapsed="2.207732"/>
+</kw>
+<status status="FAIL" start="2024-04-11T12:04:46.532889" elapsed="11.130191">Lengths are different: 6 != 5</status>
+</test>
+<doc>To test the login functionality for NITSANON website</doc>
+<status status="FAIL" start="2024-04-11T12:04:46.312661" elapsed="11.359587"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

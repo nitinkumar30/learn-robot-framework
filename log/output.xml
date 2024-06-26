@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-12T15:47:18.621909" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Nitin.kumar4\PycharmProjects\project_robotFramework\nitsanon\login.robot">
+<test id="s1-t1" name="Delete the story with particular title" line="40">
+<kw name="open the browser and navigate to NITSANON portal" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:18.828446" level="INFO">Opening browser 'Chrome' to base url 'http://nitsanon.epizy.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-12T15:47:18.828446" elapsed="11.719809"/>
+</kw>
+<status status="PASS" start="2024-04-12T15:47:18.828446" elapsed="11.719809"/>
+</kw>
+<kw name="Put credentials in the portal">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:30.549008" level="INFO">Typing text 'nitin' into text field 'id=username'.</msg>
+<arg>${USERNAME_TEXTBOX}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-12T15:47:30.549008" elapsed="0.082736"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:30.631744" level="INFO">Typing text 'kumar' into text field 'id=password'.</msg>
+<arg>${PASSWORD_TEXTBOX}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-12T15:47:30.631744" elapsed="0.064672"/>
+</kw>
+<arg>${C_USERNAME}</arg>
+<arg>${C_PASSWORD}</arg>
+<status status="PASS" start="2024-04-12T15:47:30.548255" elapsed="0.148161"/>
+</kw>
+<kw name="Click on submit button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:30.697470" level="INFO">Clicking button 'name=login'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-12T15:47:30.696416" elapsed="4.222670"/>
+</kw>
+<status status="PASS" start="2024-04-12T15:47:30.696416" elapsed="4.222670"/>
+</kw>
+<kw name="Check the page is navigated to dashboard">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:34.925085" level="INFO">Page title is 'NITSANON'.</msg>
+<arg>${EXPECTED_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-12T15:47:34.920085" elapsed="0.005000"/>
+</kw>
+<status status="PASS" start="2024-04-12T15:47:34.919086" elapsed="0.007000"/>
+</kw>
+<kw name="Delete the story">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-04-12T15:47:34.935599" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2e10f355ca96c3bacdf1cc34c833a315", element="f.401ACACF28B0234B2C825DBEC96CC86E.d.EB57AC0EF25554D7FE92EB10EAEE7F02.e.75")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>${STORIES}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-04-12T15:47:34.926086" elapsed="0.009513"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-12T15:47:34.935599" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-12T15:47:34.935599" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-12T15:47:34.936598" level="INFO">@{actual_STORIES} = [ ]</msg>
+<var>@{actual_STORIES}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-12T15:47:34.935599" elapsed="0.000999"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2024-04-12T15:47:34.949921" level="FAIL">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</msg>
+<arg>${story_name} == ${element.text}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="FAIL" start="2024-04-12T15:47:34.936598" elapsed="0.013323">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</kw>
+<kw name="${index} += 1">
+<status status="NOT RUN" start="2024-04-12T15:47:34.951057" elapsed="0.001042"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2e10f355ca96c3bacdf1cc34c833a315", element="f.401ACACF28B0234B2C825DBEC96CC86E.d.EB57AC0EF25554D7FE92EB10EAEE7F02.e.75")&gt;</var>
+<status status="FAIL" start="2024-04-12T15:47:34.936598" elapsed="0.015501">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="FAIL" start="2024-04-12T15:47:34.936598" elapsed="0.015501">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</for>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://div[@class='alert'][4]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-12T15:47:34.952099" elapsed="0.000000"/>
+</kw>
+<arg>This story is made to be deleted.</arg>
+<status status="FAIL" start="2024-04-12T15:47:34.926086" elapsed="0.026013">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-12T15:47:34.952099" elapsed="2.163901"/>
+</kw>
+<status status="FAIL" start="2024-04-12T15:47:18.828446" elapsed="18.288694">Evaluating expression 'This story is made to be deleted. == This story is made to be deleted.' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</test>
+<doc>To test the login functionality for NITSANON website</doc>
+<status status="FAIL" start="2024-04-12T15:47:18.624950" elapsed="18.493263"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
