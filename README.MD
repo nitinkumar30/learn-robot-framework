@@ -2,6 +2,7 @@
 
 > All the docs and notes used by me while learning [Robot Framework]() are present in this repo.  
 > Will update this regularly as and when required.  
+> Done a complete project to automate my website using Robot framework. Script is under [nitsanon](nitsanon) folder. Same project is automated using selenium in repo with repo name as [automation-framework-in-python](https://github.com/nitinkumar30/automation-framework-in-python/tree/main)
 
 # Following is the directory tree I'm using
 
