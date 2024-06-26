@@ -5,6 +5,39 @@
 
 # Following is the directory tree I'm using
 
+.\
+│
+├── log\
+│   ├── log.html
+│   ├── output.xml
+│   └── report.html
+│
+├── nitsanon\
+│   ├── resources\
+│   │   └── resources.robot
+│   ├── log.html
+│   ├── login.robot
+│   ├── output.xml
+│   ├── report.html
+│   ├── selenium-screenshot-1.png
+│   └── selenium-screenshot-2.png
+│
+├── tests\
+│   ├── demo.robot
+│   ├── log.html
+│   ├── loginValidation.robot
+│   ├── output.xml
+│   ├── report.html
+│   ├── resource.robot
+│   ├── selenium-screenshot-1.png
+│   └── testdemo2.robot
+│
+├── add.robot
+├── log.html
+├── main.py
+├── output.xml
+├── README.md
+└── report.html
 
 
 # Following are the related links
