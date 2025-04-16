@@ -26,5 +26,4 @@ ${EXPECTED_TITLE}   NITSANON
 
 open the browser and navigate to NITSANON portal
     Open Browser    ${URL}    Chrome
-    Maximize Browser Window
 
